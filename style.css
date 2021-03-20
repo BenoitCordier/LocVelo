@@ -1,0 +1,289 @@
+﻿html, body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "arial", sans-serif;
+    text-align: center;
+    background-image: url("assets/img/bg1.jpg");
+}
+
+section {
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    padding: 20px;
+}
+
+.green {
+    color: #94C01F;
+}
+
+.red {
+    color: darkred;
+}
+
+.bloc {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Header */
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: auto;
+    height: 150px;
+    background: white;
+    border-bottom: 4px solid #94C01F;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.logo {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 75px;
+}
+
+.ville {
+    grid-area: 1/1/2/2;
+}
+
+.service {
+    grid-area: 1/2/2/3;
+}
+
+.region {
+    padding-top: 20%;
+    grid-area: 1/3/2/4;
+}
+
+/* Caroussel */
+
+#caroussel {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+    #caroussel > img {
+        grid-area: 1 / 1 / 6 / 8;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+.txt {
+    display: none;
+}
+
+/* Contrôles */
+
+#sliderBtnLeft {
+    grid-area: 3/1/4/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#sliderBtnRight {
+    grid-area: 3/7/4/8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fas {
+    font-size: 2vw;
+    color: white;
+    padding: 0.4vw;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+    .fas:hover {
+        color: black;
+        background-color: rgb(240, 240, 240);
+    }
+
+#btnLeft, #btnRight {
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0;
+    user-select: none;
+}
+
+    #btnLeft:hover, #btnRight:hover {
+        background-color: #94C01F;
+    }
+
+.btn {
+    margin: 0;
+    padding: 0;
+}
+
+#sliderNav {
+    grid-area: 5/1/6/8;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play {
+    display: none;
+    align-self: center;
+}
+
+#pause {
+    display: block;
+    align-self: center;
+}
+
+.circle {
+    display: inline-block;
+    margin: 10px;
+    width: 12.5px;
+    height: 12.5px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+#circle1 {
+    background-color: #94C01F;
+}
+
+.active {
+    background-color: #94C01F;
+}
+
+.nav {
+    font-size: 17px !important;
+    background-color: inherit !important;
+    color: rgba(55, 55, 55, 1) !important;
+    cursor: pointer;
+}
+
+    .nav:hover {
+        color: #94C01F !important;
+    }
+
+/* Map */
+
+#mapAndData {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: auto;
+}
+
+#map {
+    grid-area: 1/1/5/7;
+    background: white;
+    border: 4px solid #94C01F;
+    border-radius: 5%;
+    padding: 20px;
+    z-index: 1;
+}
+
+#mapid {
+    height: 650px;    
+}
+
+/* Formulaire */
+
+#dataStations {
+    grid-area: 1/5/5/7;
+    height: inherit;
+    display: none;
+    background: white;
+    border: 4px solid #94C01F;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 15%;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+#formResa {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 17%;
+}
+
+.firstName {
+    padding-right: 22px;
+}
+
+.lastName {
+    padding-right: 0;
+}
+
+/* Signature */
+
+#formCanvas {
+    grid-area: 3/5/5/7;
+    display: none;
+    background: white;
+    border: 4px solid #94C01F;
+    border-radius: 20px;
+    z-index: 15;
+}
+
+#my-canvas, #canvas {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    z-index: 10;
+    cursor: pointer;
+    width: 70%;
+    height: 70%;
+}
+
+#emptyCanvas {
+    display: none;
+}
+
+/* Info */
+
+#info {
+    grid-area: 2/3/4/5;
+    display: none;
+    z-index: 40;
+    background: white;
+    border: 4px solid #94C01F;
+    border-radius: 20px;
+    padding: 10px;
+} 
+
+#countdownDiv {
+    display: none;
+}

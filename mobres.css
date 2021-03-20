@@ -1,0 +1,22 @@
+/* Media Queries */
+
+@media all and (max-width: 767px) {
+
+    .logo {
+        height: 50px;
+    }
+
+    #dataStations {
+        grid-area: 1/1/5/7;
+    }
+
+    #formCanvas {
+        grid-area: 1/1/5/7;
+        padding-top: 30%;
+    }
+
+    #info {
+        grid-area: 1/1/5/7;
+        padding-top: 30%;
+    }
+}

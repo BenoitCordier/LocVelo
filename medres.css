@@ -1,0 +1,7 @@
+/* Media Queries */
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+	#info {
+		grid-area: 2/2/4/6;
+	}
+}

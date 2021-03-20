@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+    <title>Resa Velo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="(max-width: 767px)" href="mobres.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 768px) and (max-width: 991px)" href="lowres.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 992px) and (max-width: 1199px)" href="medres.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <section id="header">
+        <div class="col-4"><img src="assets/img/logo-cergy.png" alt="logo ville" class="logo ville" /></div>
+        <div class="col-4"><img src="assets/img/logo-velo2.png" alt="logo service" class="logo service" /></div>
+        <div class="col-4"><img src="assets/img/logo-ridf.png" alt="logo region" class="logo region" /></div>
+    </section>
+
+    <!-- Caroussel -->
+
+    <section id="caroussel" class="caroussel">
+        <img src="" alt="caroussel image" class="carousselImg"/>
+        <div id="txt" class="txt"></div>
+        <div id="sliderBtnLeft">
+            <span class="btn"><i class="fas fa-chevron-left" id="btnLeft"></i></span>
+        </div>
+        <div id="sliderBtnRight">
+            <span class="btn"><i class="fas fa-chevron-right" id="btnRight"></i></span>
+        </div>
+        <div id="sliderNav">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <div id="ctrlDiv">
+                <span class="btn"><i class="fas fa-pause nav" id="pause"></i></span>
+                <span class="btn"><i class="fas fa-play nav hidden" id="play"></i></span>
+            </div>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+    </section>
+
+    <!-- Carte & Formulaire -->
+    <section id="mapAndData">
+
+        <!-- Carte -->
+
+        <div id="map" class="bloc">
+            <div id="mapid"></div>
+        </div>
+
+        <!-- Informations -->
+
+        <div id="dataStations" class="bloc">
+            <div id="data">
+                <h3>Station</h3>
+                <p id="stationName"></p>
+                <p id="stationAddress"></p>
+                <p id="nbVeloStation"></p>
+                <p id="nbVelo"></p>
+                <p id="stationStatus"></p>
+            </div>
+
+            <!-- Formulaire -->
+
+            <form id="formResa" class="form formReservation" action="" method="GET" name="formReservation" onsubmit="return valider ()">
+                <h3>Réservez !</h3>
+                <div id="input">
+                    <p class="firstName">
+                            <label for="firstName">Prénom &nbsp;</label><input type="text" name="firstName" id="firstName" required>
+                    </p>
+                    <p class="lastName">
+                            <label for="lastName">Nom &nbsp;</label><input type="text" name="lastName" id="lastName" required>
+                    </p>
+                </div>
+                <input type="button" value="Retour" class="btnReturn" />
+                <input type="button" value="Réservation" class="btnReservation" />
+            </form>
+        </div>
+
+        <!-- Signature -->
+
+        <div id="formCanvas" class="bloc">
+            <form class="form formCanvas">
+                <h3>Signez ici pour valider votre réservation !</h3>
+                <canvas id="my-canvas" width="300" height="150">
+                    Votre navigateur ne supporte pas cet élément.
+                </canvas>
+                <canvas id="emptyCanvas"></canvas>
+                <div id="divbutton">
+                    <button class="btnVelo btnClearCanvas">Reset</button>
+                    <input type="submit" value="Valider" class="btnVelo btnValider">
+                </div>
+            </form>
+        </div>
+
+        <!-- Info de la réservation -->
+
+        <div id="info" class="bloc">
+            <h2>Votre réservation</h2>
+            <div id="recapReservation">
+                <p><span id="firstNameReservation"></span> <span id="lastNameReservation"></span></p>
+                <p>Location : <span>1</span> Vélo</p>
+                <p>Station : <span id="stationNameReservation"></span></p>
+                <p><span id="stationAddressReservation"></span></p>
+            </div>
+            <div id="countdownDiv">
+                <p>
+                    <span id="countdown">Temps restant :</span>
+                    <span id="time"></span>
+                </p>
+            </div>
+            <button id="btnClearReservation" class="btnVelo">Annuler</button>
+        </div>
+    </section>
+
+    <!-- Script : fontAwesome, Carte, Constructor -->
+
+    <script src="https://kit.fontawesome.com/df0dafa5f2.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <script src="js/Caroussel.js"></script>
+    <script src="js/main_caroussel.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/Reservation.js"></script>
+    <script src="js/Timer.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
