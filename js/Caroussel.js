@@ -54,7 +54,5 @@ class Diaporama {
         this.imgElem.src = this.images[this.position];
         this.circle[this.position].style.backgroundColor = "#94C01F";
         document.getElementById('txt').innerHTML = this.txt[this.position];
-    }
-
-    
+    }       
 }

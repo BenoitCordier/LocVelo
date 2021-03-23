@@ -73,7 +73,8 @@ class Timer {
         if (!this.minutes_data || !this.seconds_data) {
 
         } else {
-            this.duration = parseInt(minutes_data * 60) + parseInt(seconds_data);
+            this.duration = parseInt(this.minutes_data * 60) + parseInt(this.seconds_data);
+            this.display = document.querySelector('#time');
             document.getElementById('firstNameReservation').innerHTML = sessionStorage.getItem('firstNameReservation');
             document.getElementById('lastNameReservation').innerHTML = sessionStorage.getItem('lastNameReservation');
             document.getElementById('stationNameReservation').innerHTML = sessionStorage.getItem('stationNameReservation');

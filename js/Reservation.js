@@ -12,6 +12,7 @@ class Reservation {
 		
 		this.btnReservation = document.querySelector('.btnReservation');
 		this.btnClearCanvas = document.querySelector('.btnClearCanvas');
+		this.btnCloseCanvas = document.querySelector('.btnCloseCanvas');
 		this.btnValider = document.querySelector('.btnValider');
 
 		this.formCanvas = document.querySelector('#formCanvas');
@@ -31,6 +32,10 @@ class Reservation {
 		this.btnValider.addEventListener('click', (e) => {
 			this.validation(e);
 		});
+
+		this.btnCloseCanvas.addEventListener('click', (e) => {
+			this.close(e);
+        })
 
 		// Souris
 
@@ -187,6 +192,12 @@ class Reservation {
 			document.getElementById('stationAddressReservation').innerHTML = sessionStorage.getItem('stationAddressReservation');
 		}
 	};
+
+	close(e) {
+		e.preventDefault();
+		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		this.formCanvas.style.display = 'none';
+    }
 
 	restoreLocalStorage() {
 		if (this.storedFirstName) {
