@@ -23,13 +23,15 @@ class Timer {
         });
 
         this.btnClearReservation.addEventListener('click', () => {
-            clearInterval(this.count);
-            this.duration = duration;
-            this.info.style.display = 'none';
-            sessionStorage.removeItem("minutes");
-            sessionStorage.removeItem("seconds");
+            if (confirm("\u00cates-vous s\u00fbr(e) de vouloir annuler votre r\u00e9servation ?")) {
+                clearInterval(this.count);
+                this.duration = duration;
+                this.info.style.display = 'none';
+                sessionStorage.removeItem("minutes");
+                sessionStorage.removeItem("seconds");
 
-            alert('Votre r\u00e9servation a \u00e9t\u00e9 annul\u00e9e !');
+                alert('Votre r\u00e9servation a \u00e9t\u00e9 annul\u00e9e !');
+            };
         });
 
         window.onload = this.restoreStorage;
@@ -59,7 +61,7 @@ class Timer {
                 var alerted = localStorage.getItem('alerted') || '';
 
                 if (alerted != 'yes') {
-                    alert("Votre r\u00e9servation a expir\u00e9 !\nA bientot");  //\00c0 bient\00f4t !
+                    alert("Votre r\u00e9servation a expir\u00e9 !\n\u00c0 bient\u00f4t");
                     localStorage.setItem('alerted', 'yes');
                 };
             };
