@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html lang="fr">
 <head>
-    <title>Resa Velo</title>
+    <title>Vel'O2 Cergy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,17 +31,17 @@
         <img src="" alt="caroussel image" class="carousselImg"/>
         <div id="txt" class="txt"></div>
         <div id="sliderBtnLeft">
-            <span class="btn"><i class="fas fa-chevron-left" id="btnLeft"></i></span>
+            <span><i class="fas fa-caret-left" id="btnLeft"></i></span>
         </div>
         <div id="sliderBtnRight">
-            <span class="btn"><i class="fas fa-chevron-right" id="btnRight"></i></span>
+            <span><i class="fas fa-caret-right" id="btnRight"></i></span>
         </div>
         <div id="sliderNav">
             <span class="circle"></span>
             <span class="circle"></span>
             <div id="ctrlDiv">
-                <span class="btn"><i class="fas fa-pause nav" id="pause"></i></span>
-                <span class="btn"><i class="fas fa-play nav hidden" id="play"></i></span>
+                <span><i class="fas fa-pause nav" id="pause"></i></span>
+                <span><i class="fas fa-play nav hidden" id="play"></i></span>
             </div>
             <span class="circle"></span>
             <span class="circle"></span>
@@ -75,14 +75,14 @@
                 <h3>Réservez !</h3>
                 <div id="input">
                     <p class="firstName">
-                            <label for="firstName">Prénom &nbsp;</label><input type="text" name="firstName" id="firstName" required>
+                        <label for="firstName">Prénom &nbsp;</label><input type="text" name="firstName" id="firstName" required>
                     </p>
                     <p class="lastName">
-                            <label for="lastName">Nom &nbsp;</label><input type="text" name="lastName" id="lastName" required>
+                        <label for="lastName">Nom &nbsp;</label><input type="text" name="lastName" id="lastName" required>
                     </p>
                 </div>
-                <input type="button" value="Retour" class="btnReturn" />
-                <input type="button" value="Réservation" class="btnReservation" />
+                <span class="btnReturn"><i class="far fa-times-circle"></i></span>
+                <span class="btnReservation"><i class="far fa-check-circle"></i></span>
             </form>
         </div>
 
@@ -96,8 +96,9 @@
                 </canvas>
                 <canvas id="emptyCanvas"></canvas>
                 <div id="divbutton">
-                    <button class="btnVelo btnClearCanvas">Reset</button>
-                    <input type="submit" value="Valider" class="btnVelo btnValider">
+                    <span class="btnCloseCanvas"><i class="far fa-times-circle"></i></span>
+                    <span class="btnClearCanvas"><i class="fas fa-redo-alt"></i></span>
+                    <span class="btnValider"><i class="far fa-check-circle"></i></span>
                 </div>
             </form>
         </div>
@@ -118,7 +119,7 @@
                     <span id="time"></span>
                 </p>
             </div>
-            <button id="btnClearReservation" class="btnVelo">Annuler</button>
+            <span id="btnClearReservation"><i class="far fa-times-circle"></i></span>
         </div>
     </section>
 

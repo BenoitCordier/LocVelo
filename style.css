@@ -56,15 +56,17 @@ form {
 }
 
 .ville {
+    padding-top: 15%;
     grid-area: 1/1/2/2;
 }
 
 .service {
+    padding-top: 30%;
     grid-area: 1/2/2/3;
 }
 
 .region {
-    padding-top: 20%;
+    padding-top: 45%;
     grid-area: 1/3/2/4;
 }
 
@@ -90,7 +92,12 @@ form {
     }
 
 .txt {
-    display: none;
+    grid-area: 2/3/4/6;
+    background: white;
+    opacity: 0.8;
+    border: 4px solid #94C01F;
+    border-radius: 5%;
+    padding: 10px;
 }
 
 /* Contrôles */
@@ -109,41 +116,36 @@ form {
     align-items: center;
 }
 
-.fas {
-    font-size: 2vw;
-    color: white;
-    padding: 0.4vw;
-    padding-left: 0.8vw;
-    padding-right: 0.8vw;
-    border-radius: 50%;
-    background-color: black;
+#btnLeft, #btnRight {
+    background-color: grey;
     opacity: 0.9;
     cursor: pointer;
-}
-
-    .fas:hover {
-        color: black;
-        background-color: rgb(240, 240, 240);
-    }
-
-#btnLeft, #btnRight {
-    cursor: pointer;
-    padding: 16px;
-    color: white;
+    padding: 10px;
+    color: #94C01F;
+    font-size: 30px;
     font-weight: bold;
-    font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0;
     user-select: none;
 }
 
     #btnLeft:hover, #btnRight:hover {
+        color: grey;
         background-color: #94C01F;
     }
 
-.btn {
-    margin: 0;
-    padding: 0;
+#btnRight {
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    padding-right: 15px;
+    padding-left: 20px;
+}
+
+#btnLeft {
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    padding-right: 20px;
+    padding-left: 15px;
 }
 
 #sliderNav {
@@ -155,15 +157,32 @@ form {
     align-items: center;
 }
 
+#play, #pause {
+    border-radius: 50%;
+    opacity: 0.9;
+    padding: 10px;
+    align-self: center;
+    font-size: 17px;
+    border: 3px solid grey;
+    background-color: grey;
+    color: #94C01F;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
 #play {
     display: none;
-    align-self: center;
 }
 
 #pause {
     display: block;
-    align-self: center;
 }
+
+    #play:hover, #pause:hover {
+        color: grey;
+        background-color: #94C01F;
+        border: 3px solid #94C01F;
+    }
 
 .circle {
     display: inline-block;
@@ -181,17 +200,6 @@ form {
 .active {
     background-color: #94C01F;
 }
-
-.nav {
-    font-size: 17px !important;
-    background-color: inherit !important;
-    color: rgba(55, 55, 55, 1) !important;
-    cursor: pointer;
-}
-
-    .nav:hover {
-        color: #94C01F !important;
-    }
 
 /* Map */
 
@@ -247,6 +255,46 @@ form {
     padding-right: 0;
 }
 
+#divbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.btnReturn, .btnReservation, .btnCloseCanvas, .btnValider {
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.btnClearCanvas {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 3px solid black;
+    border-radius: 50%;
+    padding: 3.5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+    .btnReturn:hover, .btnCloseCanvas:hover {
+        color: red;
+    }
+
+    .btnReservation:hover, .btnValider:hover {
+        color: #94C01F;
+    }
+
+    .btnClearCanvas:hover {
+        color: orangered;
+        border-color: orangered;
+    }
+
 /* Signature */
 
 #formCanvas {
@@ -287,3 +335,14 @@ form {
 #countdownDiv {
     display: none;
 }
+
+#btnClearReservation {
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+    #btnClearReservation:hover {
+        color: red;
+    }

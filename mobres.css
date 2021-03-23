@@ -2,8 +2,16 @@
 
 @media all and (max-width: 767px) {
 
+    #header {
+        height: 100px;
+    }
+
     .logo {
         height: 50px;
+    }
+
+    .txt {
+        grid-area: 2/2/4/7;
     }
 
     #dataStations {
